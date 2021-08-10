@@ -1,0 +1,127 @@
+
+/* Start Variables */
+:root{
+    /* Primary */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+/* End Variables */
+/* Start Global */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    
+}
+body{
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Mobile */
+@media (max-width: 375px) {
+    
+}
+/* Desktop */
+@media (min-width: 376px) and (max-width: 1440px) {
+    
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 20px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+/* End Global */
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0 auto;
+    width: auto;
+}
+.card{
+    max-width: 375px;
+    padding: 6em 2em 6em 2em;
+    position: relative;
+}
+@media (max-width: 375px){
+    html{
+        font-size: 14px;
+    }
+    body{
+    }
+    .cards{
+        width: 90%;
+        flex-direction: column;
+    }
+    
+}
+.card-one{
+    background-color: var(--Bright-orange);
+}
+.card-one::after,
+.card-two::after,
+.card-three::after{
+    content: "";
+    width: 25%;
+    height: 10%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: contain;
+    position: absolute;
+    top: 2em;
+    left: 2m;
+}
+.card-one::after{
+    background-image: url(/images/icon-sedans.svg);
+}
+.card-two{
+    background-color: var(--Dark-cyan);
+}
+.card-two::after{
+    background-image: url(/images/icon-suvs.svg);
+}
+.card-three{
+    background-color: var(--Very-dark-cyan);
+}
+.card-three::after{
+    background-image: url(/images/icon-luxury.svg);
+}
+.card-title{
+    font-size: 2rem;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin-bottom: 0.8em;
+    color: var(--Very-light-gray);
+}
+.card-desc{
+    color: var(--Transparent-white);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+input[type="button"]{
+    padding: 0.8em 1.5em;
+    margin-top: 2em;
+    font-weight: 300;
+    border: none;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transform: translate(2em, -2em);
+    mix-blend-mode: color-dodge;
+    border: 1px solid var(--Very-light-gray);
+    transition: 0.5s;
+}
+input[type="button"]:hover{
+    background-color: transparent;
+    color: var(--Very-light-gray);
+}
+/* End Global */
